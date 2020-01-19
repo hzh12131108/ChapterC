@@ -33,3 +33,7 @@ int P4_3();
 int P4_4();
 int P4_5();
 int P4_6();
+int P4_7();
+int P4_8();
+int P4_9();
+int P4_10();
