@@ -202,3 +202,127 @@ int P4_10()
 }
 
 //例题4-11；
+struct inflatable
+{
+	char name[20];
+	float volume;
+	double price;
+};
+int P4_11()
+{
+	inflatable guest =
+	{
+		"Glorious Gloria",
+		1.88,
+		29.99
+	};
+
+	inflatable pal =
+	{
+		"Audacious Arthur",
+		3.12,
+		32.99
+	};
+
+	cout << "Expand your guest list with " << guest.name;
+	cout << " and " << pal.name << "!\n";
+
+	cout << "You can have both for $";
+	cout << guest.price + pal.price << "!\n";
+	return 0;
+}
+
+
+//例题4-12；
+struct inflatable
+{
+	char name[20];
+	float volume;
+	double price;
+};
+
+int 4_12()
+{
+	inflatable bouquet =
+	{
+		"sunflowers",
+		0.20,
+		12.49
+	};
+	inflatable choice;
+	cout << "bouquet: " << bouquet.name << " for $ ";
+	cout << bouquet.price << endl;
+
+	choice = bouquet;
+	cout << "choice: " << choice.name << " for $ ";
+	cout << choice.price << endl;
+	return 0;
+}
+
+
+//例题4-13；
+struct inflatable
+{
+	char name[20];
+	float volume;
+	double price;
+ };
+
+int P4_13()
+{
+	inflatable guests[2] =
+	{
+		{"Bambi",0.5,21.99},
+	    {"Godzilla",2000,565.99}
+	 };
+
+	cout << "The guests " << guests[0].name << " and " << guests[1].name
+		<< "\nhave a combined volume of "
+		<< guests[0].volume + guests[1].volume << " cubic feet.\n";
+	return 0;
+}
+
+
+//例题4-14；
+int P4_14()
+{
+	int donuts = 6;
+	double cups = 4.5;
+
+	cout << "donuts value = " << donuts;
+	cout << " and donuts address = " << &donuts << endl;
+
+	cout << "cups value = " << cups;
+	cout << " and cups address = " << &cups << endl;
+	return 0;
+}
+
+
+//例题4-15；
+int P4_15()
+{
+	int updates = 6;
+	int* p_updates;
+	p_updates = &updates;
+
+	cout << "Value: updates = " << updates;
+	cout << ", p_updates = " << p_updates << endl;
+
+	*p_updates = *p_updates + 1;
+	cout << "Now updates = " << updates << endl;
+	return 0;
+}
+
+
+//例题4-16；
+int 4_16()
+{
+	int higgens = 5;
+	int* pt = &higgens;
+
+	cout << "Value of higgens = " << higgens
+		<< "; Address of higgens = " << &higgens << endl;
+	cout << "Value of *pt = " << *pt
+		<< "; Value of pt = " << pt << endl;
+	return 0;
+}
