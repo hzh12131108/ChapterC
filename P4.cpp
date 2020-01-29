@@ -241,7 +241,7 @@ struct inflatable
 	double price;
 };
 
-int 4_12()
+int P4_12()
 {
 	inflatable bouquet =
 	{
@@ -315,7 +315,7 @@ int P4_15()
 
 
 //ÀıÌâ4-16£»
-int 4_16()
+int P4_16()
 {
 	int higgens = 5;
 	int* pt = &higgens;
