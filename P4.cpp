@@ -273,7 +273,7 @@ int P4_13()
 	inflatable guests[2] =
 	{
 		{"Bambi",0.5,21.99},
-	    {"Godzilla",2000,565.99}
+		{"Godzilla",2000,565.99}
 	 };
 
 	cout << "The guests " << guests[0].name << " and " << guests[1].name
@@ -324,5 +324,78 @@ int P4_16()
 		<< "; Address of higgens = " << &higgens << endl;
 	cout << "Value of *pt = " << *pt
 		<< "; Value of pt = " << pt << endl;
+	return 0;
+}
+
+
+//ÀýÌâ4-17£»
+int PP4_17()
+{
+	int nights = 1001;
+	int* pt = new int;
+	*pt = 1001;
+
+	cout << "nights value = ";
+	cout << nights << ": location " << &nights << endl;
+	cout << "int ";
+	cout << "value = " << *pt << ": location =" << pt << endl;
+	double* pd = new double;
+	*pd = 10000001.0;
+
+	cout << "double ";
+	cout << "value = " << *pd << ": location = " << pd << endl;
+	cout << "location of pointer pd: " << &pd << endl;
+	cout << "size of pt = " << sizeof(pt);
+	cout << ": size of pt = " << sizeof(pt) << endl;
+	cout << "size of pd = " << sizeof pd;
+	cout << ": size of *pd = " << sizeof(*pd) << endl;
+	return 0;
+}
+
+
+//ÀýÌâ4-18£»
+int P4_18()
+{
+	double* p3 = new double[3];
+	p3[0] = 0.2;
+	p3[1] = 0.5;
+	p3[2] = 0.8;
+	cout << "p3[1] is " << p3[1] << ".\n";
+	p3 = p3 + 1;
+	cout << "Now p3[0] is " << p3[0] << " and ";
+	cout << "p3[1] is " << p3[1] << ".\n";
+	p3 = p3 - 1;
+	delete[] p3;
+	return 0;
+}
+
+
+//ÀýÌâ4-19£»
+int P4_19()
+{
+	double wages[3] = { 10000.0,20000.0,30000.0 };
+	short stacks[3] = { 3,2,1 };
+
+	double* pw = wages;
+	short* ps = &stacks[0];
+
+	cout << "pw = " << pw << ",pw = " << *pw << endl;
+	pw = pw + 1;
+	cout << "add 1 to the pw pointer:\n";
+	cout << "pw = " << pw << ",*pw = " << *pw << "\n\n";
+	cout << "ps = " << ps << ",*ps = " << *ps << endl;
+	ps = ps + 1;
+	cout << "add 1 to the ps pointer:\n";
+	cout << "ps = " << ps << ",*ps = " << *ps << "\n\n";
+
+	cout << "access two elements with array notation\n";
+	cout << "stacks[0] = " << stacks[0]
+		<< ",stacks[1] = " << stacks[1] << endl;
+	cout << "access two elements with pointer notation\n";
+	cout << "*stacks = " << *stacks
+		<< ",*(stacks + 1) = " << *(stacks + 1) << endl;
+
+	cout << sizeof(wages) << " = size of wages array\n";
+	cout << sizeof(pw) << " = size of pw pointer\n";
 	return 0;
 }
