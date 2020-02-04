@@ -329,7 +329,7 @@ int P4_16()
 
 
 //例题4-17；
-int PP4_17()
+int P4_17()
 {
 	int nights = 1001;
 	int* pt = new int;
@@ -427,4 +427,81 @@ int P4_20()
 	delete[] ps;
 	return 0;
 
+}
+
+
+//例题4-21；
+struct inflatable
+{
+	char name[20];
+	float volume;
+	double price;
+};
+int P4_21()
+{
+	inflatable* ps = new inflatable;
+	cout << "Enter name of inflatable item: ";
+	cin.get(ps->name, 20);
+	cout << "Enter volume in cubic feet : ";
+	cin >> (*ps).volume;
+	cout << "Enter price: &";
+	cin >> ps->price;
+	cout << "Name: " << (*ps).name << endl;
+	cout << "Volume: " << ps->volume << " cubic feet\n";
+	cout << "Price: &" << ps ->price << endl;
+	delete ps;
+	return 0;
+}
+
+
+
+//例题4-22；
+char* getname(void);
+int P4_22()
+{
+	char* name;
+
+	name = getname();
+	cout << name << " at " << (int*)name << "\n";
+	delete[] name;
+
+	name = getname();
+	cout << name << " at " << (int*)name << "\n";
+	delete[] name;
+	return 0;
+}
+char* getname()
+{
+	char temp[80];
+	cout << "Enter last name: ";
+	cin >> temp;
+	char* pn = new char[strlen(temp) + 1];
+	strcpy(pn, temp);
+
+	return pn;
+}
+
+
+
+//例题4-23；
+struct antarctica_years_end
+{
+	int year;
+};
+int P4_23()
+{
+	antarctica_years_end s01, s02, s03;
+	s01.year = 1998;
+	antarctica_years_end* pa = &s02;
+	pa->year = 1999;
+	antarctica_years_end trio[3];
+	trio[0].year = 2003;
+	std::cout << trio->year << std::endl;
+	const antarctica_years_end* arp[3] = { &s01,&s02,&s03 };
+	std::cout << arp[1]->year << std::endl;
+	const antarctica_years_end** ppa = arp;
+	auto ppd = arp;
+	std::cout << (*ppa)->year << std::endl;
+	std::cout << (*(ppd + 1))->year << std::endl;
+	return 0;
 }
