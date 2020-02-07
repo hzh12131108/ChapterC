@@ -58,3 +58,4 @@ int P5_2();
 int P5_3();
 int P5_4();
 int P5_5();
+int P5_6();

@@ -2,7 +2,8 @@
 第五章习题
 */
 
-include <iostream>
+#include <iostream>
+#include <string>
 using namespace std;
 
 //例题5-1；
@@ -80,5 +81,20 @@ int P5_5()
 	cout << "Counting by " << by << "s:\n";
 	for (int i = 0; i < 100; i = i + by)
 		cout << i << endl;
+	return 0;
+}
+
+
+
+//例题5-6；
+int P5_6()
+{
+	cout << "Enter a word: ";
+	string word;
+	cin >> word;
+
+	for (int i = word.size() - 1; i >= 0;i--)
+		cout << word[i];
+	cout << "\nBye.\n";
 	return 0;
 }
