@@ -98,3 +98,79 @@ int P5_6()
 	cout << "\nBye.\n";
 	return 0;
 }
+
+
+
+//例题5-7；
+int P5_7()
+{
+	int a = 20;
+	int b = 20;
+	using std::cout;
+	cout << "a   = " << a << ":  b = " << b << "\n";
+	cout << "a++ = " << a++ << ": ++b = " << ++b << "\n";
+	cout << " a   = " << a << ":  b = " << b << "\n";
+	return 0;
+}
+
+
+
+//例题5-8；
+int P5_8()
+{
+	cout << "The Amazing Accounto will sum and average ";
+	cout << "five numbers for you.\n";
+	cout << "Please enter five values:\n";
+	double number;
+	double sum = 0.0;
+	for (int i = 1;i <= 5;i++)
+	{
+		cout << "Value " << i << ": ";
+		cin >> number;
+		sum += number;
+	}
+	cout << "Five exquisite choices indeed! ";
+	cout << "They sum to " << sum << endl;
+	cout << "and average to " << sum / 5 << ".\n";
+	cout << "The Amazing Accounto bids you adieu!\n";
+	return 0;
+}
+
+
+
+//例题5-9；
+int P5_9()
+{
+	cout << "Enter a word: ";
+	string word;
+	cin >> word;
+
+	char temp;
+	int i, j;
+	for (j = 0;i = word.size() - 1;j < i; --i; ++j)
+	{
+		temp = word[i];
+		word[i] = word[j];
+		word[j] = temp;
+	}
+	cout << word << "\nDone\n";
+	return 0;
+}
+
+
+
+//例题5-10；
+int P5_10()
+{
+	int quizscores[10] = { 20,20,20,20,20,19,20,18,20,20 };
+	cout << "Doing it right:\n";
+	int i;
+	for (i = 0;quizscores[i] == 20;i++)
+		cout << "quiz " << i << " is a 20\n";
+
+	cout << "Doing it dangerously wrong:\n";
+	for (i = 0;quizscores[i] = 20;i++)
+		cout << "quiz " << i << " is a 20\n";
+
+	return 0;
+}
