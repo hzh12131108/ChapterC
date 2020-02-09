@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include <string>
+#include <cstring>
+#include <ctime>
 using namespace std;
 
 //例题5-1；
@@ -174,3 +176,90 @@ int P5_10()
 
 	return 0;
 }
+
+
+
+//例题5-11；
+int P5_11()
+{
+	char word[5] = "?ate";
+	for (char ch = 'a';strcmp(word, "mate");ch++)
+	{
+		cout << word << endl;
+		word[0] = ch;
+	}
+	cout << "After loop ends,word is " << word << endl;
+	return 0;
+}
+
+
+
+//例题5-12；
+int P5_12()
+{
+	string word = "?ate";
+	for (char ch = 'a';word != "mate";ch++)
+	{
+		cout << word << endl;
+		word[0] = ch;
+	}
+	cout << "After loop ends,word is " << word << endl;
+	return 0;
+ }
+
+
+
+//例题5-13；
+const int ArSize = 20;
+int P5_13()
+{
+	char name[ArSize];
+	cout << "Your first name,please: ";
+	cin >> name;
+	cout << "Here is your name,verticalized and ASCIIized:\n";
+	int i = 0;
+	while (name[i] != '\0')
+	{
+		cout << name[i] << ": " << int(name[i]) << endl;
+		i++;
+	}
+	return 0;
+}
+
+
+
+//例题5-14；
+int P5_14()
+{
+	cout << "Enter the delay time,in seconds: ";
+	float secs;
+	cin >> secs;
+	clock_t delay = secs * CLOCKS_PER_SEC;
+	cout << "starting\a\n";
+	clock_t start = clock();
+	while (clock() - start < delay)
+		;
+	cout << "done\a\n";
+	return 0;
+}
+
+
+
+//例题5-15；
+int P5_15()
+{
+	int n;
+	cout << "Enter numbers in the range 1-10 to find ";
+	cout << "my favorite number\n";
+	do
+	{
+		cin >> n;
+	} while (n != 7);
+	cout << "Yes,7 is my favorite.\n";
+	return 0;
+}
+
+
+
+
+
