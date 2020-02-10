@@ -68,3 +68,8 @@ int P5_12();
 int P5_13();
 int P5_14();
 int P5_15();
+int P5_16();
+int P5_17();
+int P5_18();
+int P5_19();
+int P5_20();
